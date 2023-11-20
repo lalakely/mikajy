@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mikajy-Acceuil</title>
+    <style>
+        body{
+            background-image: url(./photo/background_mikajy.png);
+            background-position: center;
+            margin: 0;
+        }
+        .inp{
+            background-color: #ffffff00;
+            border : 2px solid black;
+            outline: none;
+            height:40px;
+            width: 450px;
+            border-radius: 30px;
+            padding-left:20px;
+            margin-top: 10px;
+        }
+        .div_nav{
+            background-color: #ffffffcb;
+            width:100%;
+            height:100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo_mikajy{
+            background-image: url(./photo/MIKAJY_logo_principale-removebg-preview.png);
+            width: 500px;
+            height: 500px;
+            background-size: cover;
+            background-position: center;
+        }
+        .s_button{
+            background-color: #ffffff00;
+            border : 2px solid black;
+            height: 45px;
+            margin: 10px;
+            border-radius: 30px;
+            width: 120px;
+        }
+        .s_button:hover{
+            background-color: #202124c4;
+            color: #ffffff;
+        }
+        .div_button{
+            display: flex;
+        }
+        .form_class{
+            display: flex;
+            flex-direction: column;
+        }
+        .label{
+            font-family: 'Courier New', Courier, monospace;
+            height: 75px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div_nav">
+        <div class="logo_mikajy"></div>
+        <form action="./cgi/mikajy.cgi" class="form_class" method="get">
+            <input type="text" placeholder="a" class="inp" name="a">
+            <input type="text" placeholder="b" class="inp" name="b">
+            <select name="eps" id="" class="inp">
+                <option value="0.00001">10^-5</option>
+                <option value="0.0000001">10^-7</option>
+                <option value="0.0000000001">10^-10</option>
+            </select>
+            <div class="div_button">
+                <button type="submit" class="s_button" value="1" name="button">Dichotomie</button>
+                <button type="submit" class="s_button" value="2" name="button">Secante</button>
+                <button type="submit" class="s_button" value="3" name="button">Tangente</button>
+            </div>    
+        </form>
+        <h3 class="label">"Ici la solution de ln(x) - 1"</h3>
+    </div>
+</body>
+</html> 
